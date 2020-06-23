@@ -11,9 +11,9 @@ export class PaymentComponent implements OnInit {
   stripe: any;
   elements: any;
 
-  @ViewChild('cardNumber') cardNumRef: ElementRef;
-  @ViewChild('cardExp') cardExpRef: ElementRef;
-  @ViewChild('cardCvc') cardCvcRef: ElementRef;
+  @ViewChild('cardNumber', {static: true}) cardNumRef: ElementRef;
+  @ViewChild('cardExp', {static: true}) cardExpRef: ElementRef;
+  @ViewChild('cardCvc', {static: true}) cardCvcRef: ElementRef;
 
   @Output() paymentConfirmed = new EventEmitter();
 
